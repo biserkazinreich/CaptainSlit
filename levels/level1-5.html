@@ -1,0 +1,160 @@
+<input type="hidden" id="level-title" value="Ambush" /> <!--Any title-->
+<input type="hidden" id="level-color" value="#28ffba3b" /> <!--Darker shade of any color-->
+<input type="hidden" id="level-size" value="7" /> <!--From 3 to 12-->
+<input type="hidden" id="level-speed" value="6" /> <!--From 1 to 10-->
+<input type="hidden" id="level-shields" value="3" /> <!--From 1 to levelSize * 1.5-->
+<input type="hidden" id="level-ammo" value="20" /> <!--From 0 to infinite-->
+<input type="hidden" id="level-skip-spawn" value="0" /> <!--From 0 to levelSize/2-->
+<input type="hidden" id="level-blockers" value="13" /> <!--From 0 to levelSize * (levelSize * 1.5)-->
+<input type="hidden" id="level-ammo-chance" value="29" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-shield-chance" value="5" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-trash-chance" value="42" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-target-spawns" value="50" /> <!--From 0 to infinite-->
+<input type="hidden" id="level-destructable-chance" value="75" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-target-pickups" value="0" /> <!--From 0 to infinite-->
+<input type="hidden" id="level-pickup-chance" value="0" /> <!--From 0 to 100%-->
+
+<audio id="levelSoundtrackAudio" loop><source src="sources/music/darkLevel.wav" type="audio/wav"></audio> <!--Level soundtrack-->
+
+<!--intro-speech-->
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>Does anybody have a creepy feeling right now?</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Hm...</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>I know I'm not imagining things!</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>I mean cats are sensitive to all kinds of waves but I feel nothing.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Echo</b><span>Maybe I'm too focused on driving but are you okay, Proxy?</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Echo</b><span>There is an incoming transmition and you didn't even notice it.</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>Oh no! You're right. What do we do captain?</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Answer it and let me talk. Like always.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>Ok. Answering now.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Hello. This is captain Slit of the Catnip. Who are we receiving from?</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>???</b><span>Well, well, well. You have made it further than we expected.</span>
+	<img src="sources/characters/alien.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Who is this?!</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>???</b><span>You have made it further than any of the others.</span>
+	<img src="sources/characters/alien.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>I repeat! Identify yourself. Now!</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>???</b><span>You were an underrated species. Not at all on our priority list.</span>
+	<img src="sources/characters/alien.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>What is this?! What do you want?!</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>???</b><span>Domination!</span>
+	<img src="sources/characters/alien.png" />
+</div>
+
+<!--fail-speech-->
+<div class="hidden fail-speech">
+	<b>Echo</b><span>Aaaaa!</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden fail-speech">
+	<b>Byte</b><span>Aaaaaaaaaa!</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden fail-speech">
+	<b>Proxy</b><span>Aaaaaaaaaaaa!</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden fail-speech">
+	<b>Slit</b><span>Aaaaaaaaaaaaaaaaaa!</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden fail-speech">
+	<b>Crew</b><span>Aaaaaaaaaaaaaaaaaaaaaaaaaaa!</span>
+	<img src="sources/characters/crew.png" />
+</div>
+
+<!--outro-speech-->
+<div class="hidden outro-speech">
+	<b>Slit</b><span>Ok, now Echo! Rotate us around the other moon so we get some cover.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>Then hide us into a crater and turn the engines off.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>I know it's not a lot but it's the best we can do.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>If we run, they'll just catch us.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Echo</b><span>Already on it, captain.</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>???</b><span>You can run cacaroach kitties, but you can't hide!</span>
+	<img src="sources/characters/alien.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>???</b><span>Eventually we will find you!</span>
+	<img src="sources/characters/alien.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>I sure hope later than sooner.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+
+
+<!--playingfield-destructable-object-->
+<div class="hidden playingfield-destructable-object">
+	<img src="sources/icons/bomb.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/explode.wav" type="audio/wav"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/explosion.wav" type="audio/wav"></audio>
+</div>
+
+<!--playingfield-pickup-object-->
+
+<!--playingfield-trash-object-->
+<div class="hidden playingfield-trash-object">
+	<img src="sources/icons/bioCanister.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/spread.mp3" type="audio/mp3"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/bang.wav" type="audio/wav"></audio>
+</div>

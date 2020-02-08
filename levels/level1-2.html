@@ -1,0 +1,244 @@
+<input type="hidden" id="level-title" value="Radioactive" /> <!--Any title-->
+<input type="hidden" id="level-color" value="#eb933447" /> <!--Darker shade of any color-->
+<input type="hidden" id="level-size" value="4" /> <!--From 3 to 12-->
+<input type="hidden" id="level-speed" value="4" /> <!--From 1 to 10-->
+<input type="hidden" id="level-shields" value="3" /> <!--From 1 to levelSize * 1.5-->
+<input type="hidden" id="level-ammo" value="20" /> <!--From 0 to infinite-->
+<input type="hidden" id="level-target-spawns" value="0" /> <!--From 0 to infinite-->
+<input type="hidden" id="level-target-pickups" value="15" /> <!--From 0 to infinite-->
+<input type="hidden" id="level-skip-spawn" value="0" /> <!--From 0 to levelSize/2-->
+<input type="hidden" id="level-blockers" value="3" /> <!--From 0 to levelSize * (levelSize * 1.5)-->
+<input type="hidden" id="level-ammo-chance" value="0" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-shield-chance" value="0" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-trash-chance" value="85" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-destructable-chance" value="0" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-pickup-chance" value="60" /> <!--From 0 to 100%-->
+
+<audio id="levelSoundtrackAudio" loop><source src="sources/music/spaceLevel.wav" type="audio/wav"></audio> <!--Level soundtrack-->
+
+<!--intro-speech-->
+<div class="hidden intro-speech">
+	<b>Slit</b><span>What's happening? Are we there yet?</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Echo</b><span>No, this is only Mars.</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Then why are we stopping?</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Echo</b><span>I don't know. I have no control, captain. Our batteries have just depleted. We've lost about 80% of our total power.</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>Hey, guys. Look outside. It's like a graveyard out here!</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Ok, what in the holy Jupiter is going on?! So these are not the ships that sent the distress call?</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>No and I'm not sure what happened to them, but I think I have an idea of what happened to our power.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>There is radioactive waste surrounding this area. Probably from the destroyed ships.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>It's messing with out electronics and it's only going to get worse the closer we get.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>Did you say mess with our electronics? Because I have really bad interference on my screen.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>They look like green blocks. Almost like some quadrants on my radar are offline.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>I can't even move my cursor over them!</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>It's fine. I have an idea.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Well spit it out Proxy!</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>Ok, so you see these ships? I detect not only radiation around them but also other debris.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>According to my calculations there are enough energy blocks out there for us to make a comeback.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>We just have to collect 15 of them.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Echo</b><span>Can't we just drive around the effected area?</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Echo</b><span>We have enough energy left to leave the radiation zone and then our energy may come back.</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>Which of these subjects was harder for you in school: Math or Physics? Energy doesn't just come back!</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>If we use the last of our energy to distance ourselves, we'll just stay stuck there.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>Do you think this is what happened to the guys who sent the distress call?</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Ok, enough chit-chat! How do we do this, Proxy?</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>Easy! Echo will take us closer to the shipwrecks and Byte will do his thing on the controlls.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>Only this time there will be no shooting! You will use the "C" key on your controller to collect the batteries with the white areas of your cursor.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>Ok, I can do that.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>I will put a counter to the top left of the screen for you.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>But make sure not to collect any of that radioactive stuff! That's important. It will damage the ship and our shields will go down.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>So watch out that there is nothing dangerous on any of the four white pickup areas when you initiate the sequence. All four of them collect at the same time!</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>And also make sure not to fire at the things unless you really have to. It will only spread the radioation and it will destroy the batteries.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>Yea, yea. I can do it.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>Seriously, Byte. No kaboom. Only the "C" control on your keyboard. "C" as collect. Focus on the white areas of your cursor. Got that?</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>Yes!</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>And just go around the green glitchy areas, ok?</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>I've got it! I said I've got it.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>Ok, fine, fine.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Then hit the gas, Echo.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Echo</b><span>Aye, captain.</span>
+	<img src="sources/characters/echo.png" />
+</div>
+
+<!--fail-speech-->
+<div class="hidden fail-speech">
+	<b>Slit</b><span>Nooo! Byte, what are you doing? Do not pick up the radioactive matter!</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden fail-speech">
+	<b>Proxy</b><span>I told you all four white pickup areas collect at the same time. You have to be carefull!</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden fail-speech">
+	<b>Proxy</b><span>If you collect the bad stuff, it damages the ship and our shields on the right side go down.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden fail-speech">
+	<b>Proxy</b><span>And you know what happens when our shields drop to zero?</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden fail-speech">
+	<b>Byte</b><span>Kaboom?</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden fail-speech">
+	<b>Proxy</b><span>Big kaboom!</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+
+<!--outro-speech-->
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>I can not believe my cat eyes.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>He did it!</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Byte</b><span>I told you I got this.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>So do we have enough energy to escape this radioactive trap?</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Echo</b><span>Yes, captain. But we will need to fuel up at the next stop.</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>That's good enough for me. Hit the gas.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Echo</b><span>Aye, aye. On our way.</span>
+	<img src="sources/characters/echo.png" />
+</div>
+
+
+<!--playingfield-destructable-object-->
+
+<!--playingfield-pickup-object-->
+<div class="hidden playingfield-pickup-object">
+	<img src="sources/icons/battery.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/disolve.mp3" type="audio/mp3"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/collect.mp3" type="audio/mp3"></audio>
+</div>
+
+<!--playingfield-trash-object-->
+<div class="hidden playingfield-trash-object">
+	<img src="sources/icons/bioCanister.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/spread.mp3" type="audio/mp3"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/bang.wav" type="audio/wav"></audio>
+</div>

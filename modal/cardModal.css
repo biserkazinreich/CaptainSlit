@@ -1,0 +1,63 @@
+.modal-card{
+	transition: all 0.5s ease;
+	left:-100%;
+    top: 15px;
+    position: absolute;
+    margin: 0;
+    background-color: darkblue;
+    width: calc(100% - 30px - 100px);
+    height: calc(100% - 30px - 100px);
+	z-index: 1000;
+	padding: 50px;
+}
+
+.modal-card .top-title{
+	margin-top: 12vmin;
+}
+
+.modal-card span{
+	font-family: monospace;
+}
+
+.modal-card.active{
+	left:15px;
+}
+
+.modal-card .modal-close{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.modal-card .modal-close:before, .modal-card .modal-close:after {
+  position: absolute;
+  left: 50%;
+  content: ' ';
+  height: 23px;
+  width: 2px;
+  background-color: white;
+}
+.modal-card .modal-close:before {
+  transform: rotate(45deg);
+}
+.modal-card .modal-close:after {
+  transform: rotate(-45deg);
+}
+
+.modal-card.modal-card-enter{
+	background-color: black;
+}
+
+.modal-card button{
+	min-width: 130px;
+    height: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: unset;
+	-webkit-box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.36);
+    -moz-box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.36);
+    box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.36);
+}

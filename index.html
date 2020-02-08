@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Captain Slit</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="background.css">
+	<link rel="stylesheet" href="planetSaver.css">
+	<link rel="stylesheet" href="planet.css">
+	<link rel="stylesheet" href="game.css">
+	<link rel="stylesheet" href="modal/cardModal.css">
+</head>
+<body>
+<div id="background" class="full-page">
+	<div id='stars'></div>
+	<div id='stars2'></div>
+	<div id='stars3'></div>
+</div>
+
+<div id="playground">
+	<h1 id="title">Captain Slit<span id="title-level-name"></span></h1>
+	<div id="audio-control">
+		<a href="#" class="speaker" onClick="toggleMute()"><span></span></a>
+	</div>
+	<div id="enter-card" class="modal-card modal-card-enter active">
+		<center><h1 class="title-text">Captain Slit!</h1></center>
+		<center><button class="btn-lg" onClick="enter()">Enter</button></center>
+	</div>
+	<div id="main-menu" class="full-page">
+		<div class="center-container">
+			<div class="main-menu-title">MAIN MENU</div>
+			<ul>
+				<li onClick="startNewGame()">Start new game</li>
+				<li class="dissabled">Continue game</li>
+				<li onClick="openModal('game-info', true)">Info</li>
+			</ul>
+		</div>
+	</div>
+	<div id="game-info" class="modal-card">
+		<center>
+			<h2 class="top-title">INFO</h2>
+			<span>
+				This game was created by Biserka Zinreich on 1.2.2020 for the Game Jam themed "Space/Morphing" hosted by Marko Ramšak.
+				<br/>Around 48 hours in total were used for the completion of this prototype that was created solely by using HTML, CSS, JavaScript and jQuery
+				<br/>The music and sound effects used in this project are bought and the graphics are borrowed from all over the internet. I do not claim to own any of them.
+				<br/><br/>Thank you for playing this fun little prototype.
+			</span>
+		</center>
+	</div>
+	<div id="game-menu" class="modal-card">
+		<center>
+			<h2 class='top-title'>PAUSE</h2>
+			<h3><span>Are you sure you want to exit? Current level progress will be lost.</span></h3>
+			<button onClick="continueGame()">Continue</button>
+			<button onClick="returnToStage()">Exit</button>
+		</center>
+	</div>
+	<div id="stage-frame" class="full-page hidden-frame">
+		<div class="page-return" onClick="loadMainMenu()"></div>
+		<div id="stage-frame-content"></div>
+	</div>
+	<div id="level-frame" class="full-page hidden-frame">
+		<div class="page-return" onClick="exitGame()"></div>
+		<div id="level-frame-content"></div>
+	</div>
+	<p id="copyright">&copy; Copyright Biserka Zinreich</p>
+</div>
+
+<div class="hidden ammo-object">
+	<img src="sources/icons/ammo.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/disolve.mp3" type="audio/mp3"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/ammo.wav" type="audio/wav"></audio>
+</div>
+
+<div class="hidden shield-object">
+	<img src="sources/icons/shield.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/disolve.mp3" type="audio/mp3"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/shield.wav" type="audio/wav"></audio>
+</div>
+
+<audio id="gameSoundtrackAudio" loop><source src="sources/music/menuMusic.wav" type="audio/wav"></audio>
+<audio id="gameStartEffectAudio"><source src="sources/music/soundEffects/startSoundEffect.mp3" type="audio/mp3"></audio>
+<audio id="gameWinSoundEffectAudio"><source src="sources/music/soundEffects/victorySoundEffect.wav" type="audio/wav"></audio>
+<audio id="gameLoseSoundEffectAudio"><source src="sources/music/soundEffects/defeatSoundEffect.wav" type="audio/wav"></audio>
+<audio id="keyStrokeAudio"><source src="sources/music/soundEffects/keyStroke.mp3" type="audio/mp3"></audio>
+<audio id="moveAudio"><source src="sources/music/soundEffects/click.mp3" type="audio/mp3"></audio>
+<audio id="shootAudio"><source src="sources/music/soundEffects/shoot.wav" type="audio/wav"></audio>
+<audio id="pickupAudio"><source src="sources/music/soundEffects/pickup.wav" type="audio/wav"></audio>
+<audio id="outOfAmmoAudio"><source src="sources/music/soundEffects/noAmmo.wav" type="audio/wav"></audio>
+
+<script
+	src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script src="modal/cardModal.js"></script>
+<script src="planetSaver.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

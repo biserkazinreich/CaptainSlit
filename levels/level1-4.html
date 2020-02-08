@@ -1,0 +1,167 @@
+<input type="hidden" id="level-title" value="Nature" /> <!--Any title-->
+<input type="hidden" id="level-color" value="#ff4f284d" /> <!--Darker shade of any color-->
+<input type="hidden" id="level-size" value="6" /> <!--From 3 to 12-->
+<input type="hidden" id="level-speed" value="6" /> <!--From 1 to 10-->
+<input type="hidden" id="level-shields" value="4" /> <!--From 1 to levelSize * 1.5-->
+<input type="hidden" id="level-ammo" value="20" /> <!--From 0 to infinite-->
+<input type="hidden" id="level-skip-spawn" value="0" /> <!--From 0 to levelSize/2-->
+<input type="hidden" id="level-blockers" value="11" /> <!--From 0 to levelSize * (levelSize * 1.5)-->
+<input type="hidden" id="level-ammo-chance" value="28" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-shield-chance" value="22" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-trash-chance" value="47" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-target-spawns" value="42" /> <!--From 0 to infinite-->
+<input type="hidden" id="level-destructable-chance" value="72" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-target-pickups" value="0" /> <!--From 0 to infinite-->
+<input type="hidden" id="level-pickup-chance" value="0" /> <!--From 0 to 100%-->
+
+<audio id="levelSoundtrackAudio" loop><source src="sources/music/energeticLevel.wav" type="audio/wav"></audio> <!--Level soundtrack-->
+
+<!--intro-speech-->
+<div class="hidden intro-speech">
+	<b>Byte</b><span>Guys! I'm getting a lot of interference again!!</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Echo</b><span>Me too! My controlls are acting all wierd!</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>What's happening, Proxy? This region is supposed to be clean and save for travel!</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>I don't know but it looks like a storm out there.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>A huge radiation zone with all kinds of debrie but I don't see any shipwrecks this time.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Echo</b><span>Whoa! But there are asteroids!</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>This is bad. Can you get us out of here, Echo?</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Echo</b><span>Maybe. But I'm gonna need guns!</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Ok, get ready, Byte! Our shields are still low and you have a limited amount of ammo to get us through this.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>I have good news though. I detect ammo and shield energy out there.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Echo</b><span>Where the hell would that be from? There aren't any shipwrecks to be seen.</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>I don't know. And it really doesn't matter right now!</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>Just collect all of the ammo and shields you can get or else we're gonna run out.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>And shoot all of the rocks you see before they hit us.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>And whatever you do, make sure not to collect the radioactive stuff!</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>Anything else, m'lady? Maybe a plate of premium tuna?</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>I don't make the rules, Byte. The universe does. So get to your guns and get shooting before we become a tin of cat meat.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+
+
+<!--fail-speech-->
+<div class="hidden fail-speech">
+	<b>Byte</b><span>Noo! It was all too much for me!</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden fail-speech">
+	<b>Proxy</b><span>Echo! Get us out of here!</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden fail-speech">
+	<b>Echo</b><span>I can't! We're hit!</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden fail-speech">
+	<b>Slit</b><span>Mayday, mayday! Is anybody out there?</span>
+	<img src="sources/characters/slit.png" />
+</div>
+
+<!--outro-speech-->
+<div class="hidden outro-speech">
+	<b>Byte</b><span>This was the closes escape we have had yet!</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden outro-speech">
+	<b>Echo</b><span>But I got us out.</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>I think it's still wierd.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>I agree. I don't believe this is a coincidence anymore. Mars was one thing but this?</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>Yes! This is just crazy! Something is happening around here. I feel it in my tail.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Echo</b><span>So what are we gonna do now?</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>We ride on. I have a feeling that signal has something to do with all of this.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Crew</b><span>Aye, aye, captain.</span>
+	<img src="sources/characters/crew.png" />
+</div>
+
+
+<!--playingfield-destructable-object-->
+<div class="hidden playingfield-destructable-object">
+	<img src="sources/icons/asteroid1.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/explode.wav" type="audio/wav"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/explosion.wav" type="audio/wav"></audio>
+</div>
+<div class="hidden playingfield-destructable-object">
+	<img src="sources/icons/asteroid2.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/explode.wav" type="audio/mp3"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/explosion.wav" type="audio/wav"></audio>
+</div>
+<div class="hidden playingfield-destructable-object">
+	<img src="sources/icons/asteroid3.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/explode.wav" type="audio/wav"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/explosion.wav" type="audio/wav"></audio>
+</div>
+
+<!--playingfield-pickup-object-->
+
+<!--playingfield-trash-object-->
+<div class="hidden playingfield-trash-object">
+	<img src="sources/icons/bioBarrel.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/spread.mp3" type="audio/mp3"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/bang.wav" type="audio/wav"></audio>
+</div>

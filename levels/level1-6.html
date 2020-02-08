@@ -1,0 +1,371 @@
+<input type="hidden" id="level-title" value="Battle" /> <!--Any title-->
+<input type="hidden" id="level-color" value="#ff285a1f" /> <!--Darker shade of any color-->
+<input type="hidden" id="level-size" value="8" /> <!--From 3 to 12-->
+<input type="hidden" id="level-speed" value="6" /> <!--From 1 to 10-->
+<input type="hidden" id="level-shields" value="4" /> <!--From 1 to levelSize * 1.5-->
+<input type="hidden" id="level-ammo" value="30" /> <!--From 0 to infinite-->
+<input type="hidden" id="level-skip-spawn" value="0" /> <!--From 0 to levelSize/2-->
+<input type="hidden" id="level-blockers" value="14" /> <!--From 0 to levelSize * (levelSize * 1.5)-->
+<input type="hidden" id="level-ammo-chance" value="40" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-shield-chance" value="10" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-trash-chance" value="50" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-target-spawns" value="75" /> <!--From 0 to infinite-->
+<input type="hidden" id="level-destructable-chance" value="78" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-target-pickups" value="0" /> <!--From 0 to infinite-->
+<input type="hidden" id="level-pickup-chance" value="0" /> <!--From 0 to 100%-->
+
+<audio id="levelSoundtrackAudio" loop><source src="sources/music/heroLevel.wav" type="audio/wav"></audio> <!--Level soundtrack-->
+
+<!--intro-speech-->
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>Okay so what in the holy cows tail was that?!</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Echo</b><span>I don't know but my heart is beating out of my chest! I nearly hit a missile when stearing us out of there.</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>They've got firepower. That's for sure.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>That's why we can't run.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>But what can we do?! We're traped here.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Okay, so here's our options.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>We can wait until their search party is the furthes away from us and try to run.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>Or? And if the second option involves guns, I already love it.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Well, or we can ambush them.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>They are searching for us thinking we are shaking in fear right now. They are not expecting us to suddenly attack back in plain daylight.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Especially if we get them from below.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>Yes! That's what I'm talking about! Let's get them!</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>I like your enthusiasm, Byte, but this has to be a unanimous decision.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>What do you say Echo and Proxy?</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Echo</b><span>I'm not gonna lie. I'm pretty scared that we're not gonna be able pull this one off guys.</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>Speak for yourself.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Proxy?</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>Well, there's really no way around it. Echo is right. Statistically we have no chance.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>But what other option do we have? Just wait here to die?</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Echo</b><span>We could send out a distress call?</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>Oh what a magnificent idea that is, Echo.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>I'm sure no one's ever had that one before.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>Damn it, Echo! The guys are right.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>Are we really just gonna sit here and wait for help to arrive?</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>And even if they do, how are they supposed to help us?</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Echo</b><span>I don't know but I don't want to die!</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>No one's gonna die if we get our act straight.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>Shut up, Byte! This is not a joke.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>And I'm not joking. We don't have much time left.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>As I see it, it's now or never.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>I hate to agree with him, but he's right.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>They are in perfect position for an ambush.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>Echo? I know it's scary but we have to trust each other.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Echo</b><span>You believe we can win this?</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>Well... Yes. Even if the odds are slim, according to the Probability Theory any outcome is possible.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>We haven't lost yet. And I don't intend to either.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>If only Byte does his job right.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>Me? I will blow these fuckers right out of the sky where they belong to!</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>So are we in agreement?</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Echo</b><span>...</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Echo</b><span>Okay, fine. Yes.</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Good. I don't know who these female dogs think they are but it's about time we show them we mean business.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Are you ready team?</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Crew</b><span>Aye, aye, Captain!</span>
+	<img src="sources/characters/crew.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Let's show them who's boss!</span>
+	<img src="sources/characters/slit.png" />
+</div>
+
+<!--fail-speech-->
+<div class="hidden fail-speech">
+	<b>Echo</b><span>Noooo! Nooooooo!</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden fail-speech">
+	<b>Proxy</b><span>Well, it was nice knowing you guys.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden fail-speech">
+	<b>Byte</b><span>At least we tried.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden fail-speech">
+	<b>Slit</b><span>I'm sorry I failed you team.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+
+<!--outro-speech-->
+<div class="hidden outro-speech">
+	<b>???</b><span>Nooooooo!</span>
+	<img src="sources/characters/alien.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Byte</b><span>Yeeeeeees!</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>I can not believe we actually pulled this off.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Echo</b><span>Wait, you did not really believe we would?</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>I mean as I said. The chances were slim to begin with.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>But we did it team.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Byte</b><span>Is this the time you tell us about our seceret raise?</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>No. This is the time I tell you how proud I am of you. Of this team.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>I have worked with many teams before but none like this one.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>Echo was scared and yet navigated the ship and it's crew the best she could.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>Proxy was the most accureate techie I have ever worked with providing just the right data at the right time.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>And Byte was the downfall of an entire army.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>We wrote history today. A story for the ages!</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>But we're still not done.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>What do you mean?</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>It's weird but we're still receiving that distress call.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Echo</b><span>Even now?!</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>Yes. It's been going on non-stop.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Byte</b><span>Could it be from a destroyed ship?</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>It could but if they destroyed the ship, why would they leave the transmiter?</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>Most likely a trap for ships like ours.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>Could be but the Probability Theory says any outcome is possible...</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>You really want to go and investigate further?</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Echo</b><span>Good travelers could be in danger.</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Byte</b><span>And more aliens could be awaiting my bullets.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>I mean what else did we get out here for?</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>If that's the case, hit the gas Echo!</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>Really?</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>Yes. Really.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Crew</b><span>Aye, aye, captain Slit.</span>
+	<img src="sources/characters/crew.png" />
+</div>
+
+
+<!--playingfield-destructable-object-->
+<div class="hidden playingfield-destructable-object">
+	<img src="sources/icons/bomb.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/explode.wav" type="audio/wav"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/explosion.wav" type="audio/wav"></audio>
+</div>
+<div class="hidden playingfield-destructable-object">
+	<img src="sources/icons/alienShip.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/explode.wav" type="audio/wav"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/explosion.wav" type="audio/wav"></audio>
+</div>
+<div class="hidden playingfield-destructable-object">
+	<img src="sources/icons/alienRocket.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/explode.wav" type="audio/wav"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/explosion.wav" type="audio/wav"></audio>
+</div>
+
+<!--playingfield-pickup-object-->
+
+<!--playingfield-trash-object-->
+<div class="hidden playingfield-trash-object">
+	<img src="sources/icons/bioCanister.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/spread.mp3" type="audio/mp3"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/bang.wav" type="audio/wav"></audio>
+</div>
+<div class="hidden playingfield-trash-object">
+	<img src="sources/icons/bioBarrel.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/spread.mp3" type="audio/mp3"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/bang.wav" type="audio/wav"></audio>
+</div>

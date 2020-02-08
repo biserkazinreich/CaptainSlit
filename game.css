@@ -1,0 +1,177 @@
+.speech-box{
+	width: 60vw;
+	height: 20vh;
+	min-height: 80px;
+	max-height: 180px;
+	border: 5px solid white;
+	overflow: auto;
+	color: white;
+	font-size: 15px;
+	position: absolute;
+    bottom: 0;
+    left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+	z-index: 100;
+	background-color: black;
+}
+
+.speech-box .speech-box-text{
+	max-width: calc(80% - 40px);
+	height: calc(100% - 40px);
+	float: left;
+	padding: 20px;
+	font-family: monospace;
+	letter-spacing: .15em; /* Adjust as needed */
+	overflow: auto;
+}
+
+.speech-box .speech-box-text b{
+	color: #00ffff69;
+}
+
+.speech-box .speech-box-text .speech-box-cursor{
+	font-weight: 700;
+    color: red;
+    font-size: 15px;
+	animation: blinker 1000ms linear infinite;
+}
+
+.speech-box .speech-box-image{
+	width: 20%;
+	height: 100%;
+	float: right;
+	background-size: contain;
+    background-position: 100%, 50%;
+    background-repeat: no-repeat;
+}
+
+.speech-skip{
+	position: absolute;
+    width: 60vw;
+    text-align: right;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(20vh + 10px);
+    color: white;
+    font-family: monospace;
+}
+
+.speech-skip span{
+	cursor: pointer;
+}
+
+#playing-field{
+	transition: all 2s ease;
+	color: white;
+	perspective: 1000px;
+}
+
+#playing-field table{
+	border-collapse: separate;
+	border-spacing: 0px;
+	width: calc(95vmin / 1.5);
+    height: 95vmin;
+	transform: rotatex(25deg);
+	margin-top: -13vh;
+}
+
+#playing-field table td{
+	border: 1px solid #5d5d5d4f;
+	background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+#playing-field table td.cursorCenter{
+	border: 1px solid red;
+	background-color: #ff00000f;
+}
+
+#playing-field table td.cursorOffCenter{
+	border: 1px solid white;
+}
+
+#playing-field table td div.blocker{
+	background: repeating-linear-gradient(45deg, #00800057, #00800000 2px, #00800000 2px, #00800000 3px) !Important;
+	width: 100%;
+	height: 100%;
+}
+
+#playing-field .playing-field-shield{
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    height: 95vh;
+    background-color: #212b2469;
+	transform: rotateX(205deg);
+}
+
+#playing-field .playing-field-shield .playing-field-shield-element{
+    background-color: #9e9e9e;
+	margin: 1px 0px;
+	-webkit-box-shadow: 10px -12px 25px -12px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px -12px 25px -12px rgba(0,0,0,0.75);
+	box-shadow: 10px -12px 25px -12px rgba(0,0,0,0.75);
+}
+
+#playing-field .playing-field-stats{
+    position: absolute;
+    left: 0;
+    top: 0;
+	transform: translate(-80%, 0) rotateX(25deg);
+	font-size: 28px;
+	color: white;
+}
+
+#playing-field .playing-field-ammo, #playing-field .playing-field-pickups{
+	text-align: right;
+	margin-bottom: 2px;
+}
+
+#playing-field .playing-field-ammo span, #playing-field .playing-field-pickups span{
+	vertical-align: middle;
+}
+
+#playing-field i.stat-icon{
+	background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-right: -5px;
+	vertical-align: middle;
+    margin-left: 2px;
+}
+
+#playing-field .playing-field-ammo i{
+	background-image: url(sources/icons/bullet.png);
+	margin-left: 0;
+}
+
+#playing-field .playing-field-pickups i{
+	background-image: url(sources/icons/list.png);
+}
+
+#flash-effect{
+	background-color: white;
+	z-index: 10000;
+	opacity: 0;
+}
+
+#flash-effect.flash{
+	animation: flash 380ms ease-out;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes flash {
+  25% {
+    opacity: 0.37;
+  }
+}

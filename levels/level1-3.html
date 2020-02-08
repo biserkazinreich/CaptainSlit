@@ -1,0 +1,189 @@
+<input type="hidden" id="level-title" value="Refule" /> <!--Any title-->
+<input type="hidden" id="level-color" value="#75704561" /> <!--Darker shade of any color-->
+<input type="hidden" id="level-size" value="5" /> <!--From 3 to 12-->
+<input type="hidden" id="level-speed" value="5" /> <!--From 1 to 10-->
+<input type="hidden" id="level-shields" value="3" /> <!--From 1 to levelSize * 1.5-->
+<input type="hidden" id="level-ammo" value="10" /> <!--From 0 to infinite-->
+<input type="hidden" id="level-target-spawns" value="0" /> <!--From 0 to infinite-->
+<input type="hidden" id="level-target-pickups" value="35" /> <!--From 0 to infinite-->
+<input type="hidden" id="level-skip-spawn" value="0" /> <!--From 0 to levelSize/2-->
+<input type="hidden" id="level-blockers" value="0" /> <!--From 0 to levelSize * (levelSize * 1.5)-->
+<input type="hidden" id="level-ammo-chance" value="25" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-shield-chance" value="0" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-trash-chance" value="18" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-destructable-chance" value="18" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-pickup-chance" value="60" /> <!--From 0 to 100%-->
+
+<audio id="levelSoundtrackAudio" loop><source src="sources/music/scifiLevel.wav" type="audio/wav"></audio> <!--Level soundtrack-->
+
+<!--intro-speech-->
+<div class="hidden intro-speech">
+	<b>Echo</b><span>I can not even believe we got out of that one alive.</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>Of course we did. My calculations were correct!</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>Don't forget my aim...</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>I must agree. You all did a great job.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Not only did we get out alive but we also made it to the refule station.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>But don't you think something feels wrong around here? Just look at how empty it is.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>This place is usualy so packed you can bump ships.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Echo</b><span>True. Once I waited in line to refule for five hours!</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>Five hours? Lucky! I was waiting in line once when a quadurion hit a centerpeedes ship and the guy got so angry they both got out in space suits and started smacking each other.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>They couldn't get them appart so they had to call Galactic Authorities but it took them 14 hours to get here. There was no way to pull out of the line so my record is 17 hours.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>They should really hire in-house security for this place.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>No need anymore, I guess.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>I don't know what happened to this place but let's get down and fuel up.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Are you ready, Byte?</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>Of course. Always!</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Well, watch out for our shields if any asteroids or debris happen to fly by.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>Now that you're using two controlls at the same time make sure not to accidentally pick the asteroids up insted of blowing them up.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Proxy</b><span>You know, if you collect an entire asteroid we might just go kaboom.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>And we're low on ammo so if you see any flying by, it wouldn't hurt to collect it.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>Sure thing, captain.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+
+<!--fail-speech-->
+
+<!--outro-speech-->
+<div class="hidden outro-speech">
+	<b>Echo</b><span>Ok. We have enough to get to the signal and back again about three times. We're full.</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>I concur. But don't you guys still feel like something's off here?</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Byte</b><span>I mean it is a little bit quiet.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>A little bit quiet? It's like a ghost town!</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Echo</b><span>Maybe they all went after that distress signal?</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>All of them? Including turists, taxis and merchant ships?</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Byte</b><span>Is it some kind of a holiday?</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>No, I believe Proxy may actually be onto something here. If nothing else it surely is weird.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>And don't forget about the shipwrecks from Mars.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Echo</b><span>You think someone is destroying ships around here?</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>I don't know but we surely almost fell for their trap back there.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Byte</b><span>Assuming it was a trap.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>No other way to find out than to follow the signal.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>But we should be on the lookout.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>Agreed.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+
+<!--playingfield-destructable-object-->
+<div class="hidden playingfield-destructable-object">
+	<img src="sources/icons/asteroid2.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/explode.wav" type="audio/mp3"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/explosion.wav" type="audio/wav"></audio>
+</div>
+<div class="hidden playingfield-destructable-object">
+	<img src="sources/icons/asteroid3.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/explode.wav" type="audio/wav"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/explosion.wav" type="audio/wav"></audio>
+</div>
+
+<!--playingfield-pickup-object-->
+<div class="hidden playingfield-pickup-object">
+	<img src="sources/icons/battery.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/disolve.mp3" type="audio/mp3"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/collect.mp3" type="audio/mp3"></audio>
+</div>
+
+<!--playingfield-trash-object-->
+<div class="hidden playingfield-trash-object">
+	<img src="sources/icons/bioCanister.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/spread.mp3" type="audio/mp3"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/bang.wav" type="audio/wav"></audio>
+</div>

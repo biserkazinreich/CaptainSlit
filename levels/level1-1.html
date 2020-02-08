@@ -1,0 +1,111 @@
+<input type="hidden" id="level-title" value="Leaving home" /> <!--Any title-->
+<input type="hidden" id="level-color" value="#06150ad8" /> <!--Darker shade of any color-->
+<input type="hidden" id="level-size" value="3" /> <!--From 3 to 12-->
+<input type="hidden" id="level-speed" value="7" /> <!--From 1 to 10-->
+<input type="hidden" id="level-shields" value="3" /> <!--From 1 to levelSize * 1.5-->
+<input type="hidden" id="level-ammo" value="50" /> <!--From 0 to infinite-->
+<input type="hidden" id="level-target-spawns" value="20" /> <!--From 0 to infinite-->
+<input type="hidden" id="level-target-pickups" value="0" /> <!--From 0 to infinite-->
+<input type="hidden" id="level-skip-spawn" value="1" /> <!--From 0 to levelSize/2-->
+<input type="hidden" id="level-blockers" value="0" /> <!--From 0 to levelSize * (levelSize * 1.5)-->
+<input type="hidden" id="level-ammo-chance" value="0" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-shield-chance" value="0" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-trash-chance" value="0" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-destructable-chance" value="100" /> <!--From 0 to 100%-->
+<input type="hidden" id="level-pickup-chance" value="0" /> <!--From 0 to 100%-->
+
+<audio id="levelSoundtrackAudio" loop><source src="sources/music/scifiLevel.wav" type="audio/wav"></audio> <!--Level soundtrack-->
+
+<!--intro-speech-->
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Hello. I'm captain Slit!</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>And this is my crew Echo, Byte and Proxy.</span>
+	<img src="sources/characters/crew.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>We are a space gang roaming from planet to planet.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>We have just receaved a distress call from space and you can bet we are going to answer it!</span>
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>So fire up our engines, start the canons and get ready for a bumpy ride!</span>
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>There's an asteroid field awaiting us before we can head out to open waters.</span>
+</div>
+<div class="hidden intro-speech">
+	<b>Crew</b><span>Aye aye, captain!</span>
+	<img src="sources/characters/crew.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Echo</b><span>But are our cannons gonna be good enough? I've heard the weather report predicts some big rocks for today.</span>
+	<img src="sources/characters/echo.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>Of course they are. These are top notch! I just put my right paw on the arrow controls, my left paw on the big long button, aim the red cursor and the rocks go kaboom.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden intro-speech">
+	<b>Slit</b><span>Just watch out for our shields on the right-hand side, Byte. We only have 3 left. Do not let the asteroids hit us.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden intro-speech">
+	<b>Byte</b><span>Consider it done, captain.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+
+<!--fail-speech-->
+
+<!--outro-speech-->
+<div class="hidden outro-speech">
+	<b>Slit</b><span>Yes! That was amaizing, Byte. We made it!</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Byte</b><span>Hope you didn't expect anything less.</span>
+	<img src="sources/characters/byte.gif" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>Now it's on towards the signal. Do you have it locked, Proxy?</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Proxy</b><span>Yes, captain. Our coordinates are set.</span>
+	<img src="sources/characters/proxy.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Slit</b><span>Then hit the gas, Echo.</span>
+	<img src="sources/characters/slit.png" />
+</div>
+<div class="hidden outro-speech">
+	<b>Echo</b><span>Aye aye, captain.</span>
+	<img src="sources/characters/echo.png" />
+</div>
+
+
+<!--playingfield-destructable-object-->
+<div class="hidden playingfield-destructable-object">
+	<img src="sources/icons/asteroid1.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/explode.wav" type="audio/wav"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/explosion.wav" type="audio/wav"></audio>
+</div>
+<div class="hidden playingfield-destructable-object">
+	<img src="sources/icons/asteroid2.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/explode.wav" type="audio/mp3"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/explosion.wav" type="audio/wav"></audio>
+</div>
+<div class="hidden playingfield-destructable-object">
+	<img src="sources/icons/asteroid3.png" />
+	<audio class="primarySoundEffect"><source src="sources/music/soundEffects/explode.wav" type="audio/wav"></audio>
+	<audio class="secondarySoundEffect"><source src="sources/music/soundEffects/explosion.wav" type="audio/wav"></audio>
+</div>
+
+<!--playingfield-pickup-object-->
+
+
+<!--playingfield-trash-object-->

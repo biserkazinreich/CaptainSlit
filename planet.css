@@ -1,0 +1,190 @@
+@keyframes translateBackground{
+  0%{
+    background-position-x:0;
+  }
+  100%{
+    background-position-x:-100%;
+  }
+}
+@keyframes rotatePlanet{
+  0%{
+    transform:rotateZ(0);
+  }
+  100%{
+    transform:rotateZ(-360deg);
+  }
+}
+
+/*Default*/
+.planet{
+	width: 20vmin;
+	height: 20vmin;
+	opacity: 0.4;
+	border-radius: 50%;
+	transition: all 0.5s ease;
+	box-shadow: 0 0 60px -20px rgba(242, 249, 255, 0.32), -14px -15px 40px -10px rgba(255, 238, 191, 0.10);
+	animation: rotatePlanet 150s infinite linear;
+	margin: 90px 0;
+}
+
+.planet.planet-active:hover, .planet.planet-solved:hover{
+	cursor: pointer;
+	box-shadow: 0 0 60px -10px rgba(252, 248, 219, 0.58), -14px -15px 40px -10px rgba(255, 238, 191, 0.13);
+}
+
+.planet.planet-active{
+	opacity: 1;
+}
+
+.planet.planet-solved{
+	opacity: 1;
+	box-shadow: 0 0 60px -10px rgba(252, 248, 219, 0.58), -14px -15px 40px -10px rgba(255, 238, 191, 0.13);
+}
+
+.planet::before{
+	content:"";
+	animation: translateBackground 40s infinite linear;
+	background-repeat: repeat-x;
+	/*background-position: 50% 50%;*/
+	width:20vmin;
+	height:20vmin;
+	position:absolute;
+	border-radius:50%;
+	box-shadow:inset -10px -10px 40px #251303, inset 10px 10px 30px -10px rgba(255, 204, 159, 0.6);
+}
+
+.planet::after{
+	content:"";
+	width:20vmin;
+	height:20vmin;
+	position:absolute;
+	border-radius:50%;
+	background-image:url(sources/planets/clouds.png);
+	background-repeat: repeat-x;
+	animation: translateBackground 30s infinite linear;
+	opacity: 0.5;
+}
+
+/*Earth*/
+.planet-earth{
+	width: 19vmin;
+	height: 19vmin;
+	animation: rotatePlanet 150s infinite linear;
+}
+
+.planet-earth::before{
+	animation: translateBackground 60s infinite linear;  
+	background-image:url(sources/planets/earth.png);
+	width:19vmin;
+	height:19vmin;
+}
+
+.planet-earth::after{
+	width:19vmin;
+	height:19vmin;
+	animation: translateBackground 50s infinite linear;
+	opacity: 0.4;
+}
+
+/*Mars*/
+.planet-mars{
+	width: 17vmin;
+	height: 17vmin;
+	animation: rotatePlanet 80s infinite linear;
+}
+
+.planet-mars::before{
+	animation: translateBackground 40s infinite linear;  
+	background-image:url(sources/planets/mars.jpg);
+	width:17vmin;
+	height:17vmin;
+}
+
+.planet-mars::after{
+	width:17vmin;
+	height:17vmin;
+	animation: translateBackground 20s infinite linear;
+}
+
+/*Crater*/
+.planet-crater{
+	width: 15vmin;
+	height: 15vmin;
+	animation: rotatePlanet 50s infinite linear;
+}
+
+.planet-crater::before{
+	animation: translateBackground 20s infinite linear;  
+	background-image:url(sources/planets/crater.png);
+	width:15vmin;
+	height:15vmin;
+}
+
+.planet-crater::after{
+	opacity: 0.15;
+	width:15vmin;
+	height:15vmin;
+	animation: translateBackground 10s infinite linear;
+}
+
+/*Lava*/
+.planet-lava{
+	width: 22vmin;
+	height: 22vmin;
+	animation: rotatePlanet 190s infinite linear;
+}
+
+.planet-lava::before{
+	animation: translateBackground 120s infinite linear;  
+	background-image:url(sources/planets/lava.jpg);
+	width:22vmin;
+	height:22vmin;
+}
+
+.planet-lava::after{
+	opacity: 0.2;
+	width:22vmin;
+	height:22vmin;
+	animation: translateBackground 40s infinite linear;
+}
+
+/*Green*/
+.planet-green{
+	width: 16vmin;
+	height: 16vmin;
+	animation: rotatePlanet 90s infinite linear;
+}
+
+.planet-green::before{
+	animation: translateBackground 80s infinite linear;  
+	background-image:url(sources/planets/green.png);
+	width:16vmin;
+	height:16vmin;
+}
+
+.planet-green::after{
+	width:16vmin;
+	height:16vmin;
+	animation: translateBackground 15s infinite linear;
+}
+
+/*Red*/
+.planet-red{
+	width: 25vmin;
+	height: 25vmin;
+	animation: rotatePlanet 220s infinite linear;
+}
+
+.planet-red::before{
+	animation: translateBackground 80s infinite linear;  
+	background-image:url(sources/planets/red.jpg);
+	width:25vmin;
+	height:25vmin;
+}
+
+.planet-red::after{
+	opacity: 0.3;
+	width:25vmin;
+	height:25vmin;
+	animation: translateBackground 50s infinite linear;
+}
